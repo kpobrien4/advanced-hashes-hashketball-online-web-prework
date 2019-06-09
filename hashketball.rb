@@ -123,6 +123,7 @@ def num_points_scored
   game_hash.each do |location, team_data|
     team_data do |key,value|
       binding.pry
+    end
   end
 end
 end
