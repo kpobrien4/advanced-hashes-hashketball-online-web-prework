@@ -129,7 +129,7 @@ end
 def num_points_scored(name)
   find_player = players.find {|player| player.fetch(:player_name) == name }
   find_player.fetch(:points)
-end 
+end
 
 
 
@@ -137,7 +137,7 @@ end
 def shoe_size(name)
   find_shoe = players.find {|player| player.fetch(:player_name) == name }
   find_shoe.fetch(:shoe)
-end 
+end
 
 
 
@@ -145,22 +145,22 @@ end
 def team_colors(team_name)
  find_team = team_stats.find {|team| team.fetch(:team_name) == team_name}
  find_team.fetch(:colors)
-end 
+end
 
 
-def team_names 
+def team_names
  team_stats.collect do |team|
    team[:team_name]
- end 
-end 
+ end
+end
 
 
 def player_numbers(team_name)
  find_numbers = team_stats.find {|team| team.fetch(:team_name) == team_name}
- find_numbers[:players].collect do |player| 
+ find_numbers[:players].collect do |player|
    player[:number]
- end 
-end 
+ end
+end
 
 def player_stats(player_name)
  stats= players.find {|player| player.fetch(:player_name) == player_name}
@@ -169,19 +169,19 @@ end
 
  def biggest_shoe
    players.max_by {|player_shoe| player_shoe.fetch(:shoe)}
- end 
+ end
 
 
  def big_shoe_rebounds
    biggest_shoe.fetch(:rebounds)
- end 
+ end
 
 
 
- def most_points_scored 
+ def most_points_scored
     most = players.max_by {|player_points| player_points.fetch(:points)}
     most.fetch(:player_name)
-  end 
+  end
 
  def winning_team
   total_points = 0
