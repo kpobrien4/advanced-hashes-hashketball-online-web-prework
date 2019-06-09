@@ -151,12 +151,8 @@ def shoe_size(name)
   end
 end
 
-def team_colors (team_name)
-    colors = nil
-    game_hash.each do |team, team_details_hash|
-        if team_details_hash[:name] == team_name
-            colors = team_details_hash[:colors].flatten
-        end
-    end
-    colors
+def team_colors(team_name)
+  game_hash.each do |location, team_data|
+    binding.pry 
+  end
 end
