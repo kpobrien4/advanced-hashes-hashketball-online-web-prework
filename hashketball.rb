@@ -200,11 +200,11 @@ def most_points_scored
 most_points = 0
  game_hash.each do |location, team_data|
    team_data[:players].each do |player|
+     binding.pry
      points = player[:points]
      if points > most_points
        most_points = points
        mvp = player[:player_name]
-       binding.pry
      end
    end
  end
