@@ -102,13 +102,13 @@ def game_hash
           :blocks => 1,
           :slam_dunks => 0
         }},
-        {"Brendan Haywood" => {
+        {"Kemba Walker" => {
           :number => 33,
           :shoe => 15,
           :points => 6,
           :rebounds => 12,
           :assists => 12,
-          :steals => 22,
+          :steals => 7,
           :blocks => 5,
           :slam_dunks => 12
         }}
@@ -117,14 +117,3 @@ def game_hash
   }
 end
 
-def find_player_hash(player_name)
-  game_hash.each do |location, team_data|
-    if team_data[:players].include?(player_name)
-      return team_data[:players][player_name]
-    end
-  end
-end 
-
-def num_points_scored(player_name)
-  find_player_hash(player_name)[:points]
-end
