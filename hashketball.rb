@@ -186,6 +186,7 @@ def player_numbers(team)
   end
     return player_nums
 end
+end
 
 def player_stats(name)
   game_hash.each do |location, team_data|
