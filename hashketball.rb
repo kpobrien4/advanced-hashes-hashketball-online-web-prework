@@ -74,9 +74,9 @@ end
 
 def player_stats(name)
  hash = game_hash
- hash.each do |location, attributes| 
-   attributes.each do |attribute, info| 
-     if info.include?(name) 
+ hash.each do |location, attributes|
+   attributes.each do |attribute, info|
+     if info.include?(name)
       return hash[location][attribute][name]
      end
    end
