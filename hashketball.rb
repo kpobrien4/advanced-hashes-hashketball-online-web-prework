@@ -37,10 +37,6 @@ end
 end
 
 
- # Alternate code
-# def num_points_scored(player_n)
-#   player_stats(player_n)[:points]
-# end
 
 
  def shoe_size(player_n)
@@ -52,10 +48,6 @@ end
 end
 
 
- # Alternate code
-# def shoe_size(player_n)
-#   player_stats(player_n)[:shoe]
-# end
 
 
  def team_colors(team_name)
@@ -106,7 +98,7 @@ end
 end
 
 
- # Bonus
+
 
  def most_points_scored
   most_points = 0
@@ -139,19 +131,18 @@ end
 end
 
  def player_with_longest_name
-  longest = ''
-  longest_length = 0
-  game_hash.each do |home_away, keys|
-    keys[:players].each do |player|
-      name_length = player[:player_name].length
-      longest, longest_length = player[:player_name], name_length if name_length > longest_length
-    end
-  end
-  return longest
+   max_player = nil
+   game.each do |team, team_hash|
+     team_hash[:players].each do |player, player_hash|
+       max_player ||= player_hash
+       max_player = player_hash if player_hash[:name].length > max_player[:name].length
+     end
+   end
+
+   max_player[:name]
 end
 
 
- # Super Bonus
 
  def long_name_steals_a_ton?
   steals_most = ''
