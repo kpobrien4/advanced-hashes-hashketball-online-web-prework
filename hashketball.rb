@@ -180,7 +180,7 @@ game_hash.each do |team, team_details_hash|
         binding.pry
         if key == :number
           player_numbers_list << value
-        
+
         end
       end
     end
