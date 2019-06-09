@@ -182,6 +182,9 @@ def player_numbers(team)
 
                 if i == :number
                   array2.push(j)
+                  if location = games_hash[away]
+                    return nil
+                  end
                 end
 end
               end
