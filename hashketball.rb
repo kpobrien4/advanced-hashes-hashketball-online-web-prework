@@ -152,7 +152,7 @@ def player_numbers(team)
         end
       end
     end
-  else 
+  else
     game_hash[:away][:players].each do |name, stats|
       stats.each do |stat_label, stat_value|
         if stat_label == :number
@@ -167,7 +167,7 @@ end
 #player_numbers("Charlotte Hornets")
 
 def player_stats(name)
-  player_stats = nil 
+  player_stats = nil
   game_hash.each do |home_away, team_info|
     team_info.each do |data_label, data|
       if data_label == :players
