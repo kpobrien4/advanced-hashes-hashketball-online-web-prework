@@ -171,7 +171,15 @@ def team_names
   end
 end
 
+def player_nums(team, hashketball)
+    sym = team.to_sym
+    player_numbers = []
 
+      hashketball[sym][:players].each_value do |x|
+      player_numbers << x[:number]
+  end
+    player_numbers
+end
 
 def player_stats(name)
   game_hash.each do |location, team_data|
