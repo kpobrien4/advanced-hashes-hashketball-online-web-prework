@@ -179,7 +179,7 @@ def player_numbers (team_name)
     if team_details_hash[:name] == team_name
       team_details_hash[:players].each do |player|
         player.each do |key, value|
-          if key == :number 
+          if key == :number
             player_numbers_list << value
           end
         end
@@ -188,5 +188,3 @@ def player_numbers (team_name)
   end
   player_numbers_list
 end
-
-
