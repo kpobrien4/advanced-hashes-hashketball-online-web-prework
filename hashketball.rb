@@ -204,6 +204,7 @@ most_points = 0
      if points > most_points
        most_points = points
        mvp = player[:player_name]
+       binding.pry
      end
    end
  end
