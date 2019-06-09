@@ -155,7 +155,7 @@ def team_colors(team_n)
   game_hash.each do |location,team_data|
     team_data.each do |key,value|
       if value == team_n
-        return player_stats[:colors]
+        return location[:colors]
       end
     end
   end
