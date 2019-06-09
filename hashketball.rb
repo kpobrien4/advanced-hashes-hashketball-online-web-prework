@@ -156,4 +156,5 @@ def team_colors(team_n)
     team_data.each do |key,value|
       if value == team_n
         return player_stats[:colors]
+      end
 end
