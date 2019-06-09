@@ -176,10 +176,10 @@ def player_numbers(team)
   game_hash.each do |location, team_data|
       if team_data[:team_name] = team
       team_data.each do |attribute, values|
-        binding.pry
           if attribute == :players
             values.each do |person|
-              person.each do |player_name,player_number|
+              person.each do |player_name,player_stat|
+                binding.pry
               player_number.each do |i, j|
                 if i == :number
                   array2.push(j)
