@@ -193,5 +193,5 @@ end
 
 def big_shoe_rebounds
   hash = game_hash[:home][:players][3]
-  hash[:rebounds]
+  hash["Mason Plumlee"][:rebounds]
 end
