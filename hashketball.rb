@@ -171,23 +171,22 @@ def team_names
   end
 end
 
-def player_numbers(team)
-  array2 = []
-  game_hash.each do |location, team_data|
-      team_data.each do |attribute, values|
-          if attribute == :players
-            values.each do |person|
-              person.each do |player_name,player_number|
-              player_number.each do |i, j|
 
-                if i == :number
-                  array2.push(j)
-                end
-end
-              end
-            end
+
+def player_numbers (team_name)
+  player_numbers_list = []
+  game_hash.each do |team, team_details_hash|
+    if team_details_hash[:name] == team_name
+      team_details_hash[:players].each do |player|
+        player.each do |key, value|
+          if key == :number 
+            player_numbers_list << value
           end
+        end
       end
+    end
   end
-  return array2
+  player_numbers_list
 end
+
+
