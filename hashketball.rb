@@ -176,6 +176,7 @@ def player_numbers(team)
   game_hash.each do |location, team_data|
       team_data.each do |attribute, values|
           if attribute == :players
+            binding.pry
             values.each do |person, data|
               data.each do |i, j|
                 if i == :number
