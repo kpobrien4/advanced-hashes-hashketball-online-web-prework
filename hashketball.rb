@@ -182,7 +182,6 @@ def player_stats(player_name)
         if name == player_name
           return player_stats
         end 
-      end
   end
 end
 end
