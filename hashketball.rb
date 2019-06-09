@@ -124,8 +124,7 @@ def num_points_scored
     team_data do |key,value|
   if value[:players].include?(player_name)
     return team_data[:players][player_name][:points]
-    end 
+    end
   end
   nil
-end 
-
+end
