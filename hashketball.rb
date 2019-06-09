@@ -192,5 +192,6 @@ end
 
 
 def big_shoe_rebounds
-game_hash[:home][:players][3]
+  hash = game_hash[:home][:players][3]
+  hash[:rebounds]
 end
