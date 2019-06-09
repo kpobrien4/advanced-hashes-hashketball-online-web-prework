@@ -184,8 +184,8 @@ def player_numbers(team)
                   array2.push(j)
                 end
 end
+return array2
               end
-              return array2
             end
           end
       end
