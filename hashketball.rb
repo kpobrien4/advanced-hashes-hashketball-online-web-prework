@@ -177,8 +177,9 @@ def player_numbers(team)
       team_data.each do |attribute, values|
           if attribute == :players
             values.each do |person, data|
+              binding.pry
               data.each do |i, j|
-                binding.pry
+            
                 if i == :number
                   array2.push(j)
                 end
