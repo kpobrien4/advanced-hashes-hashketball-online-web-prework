@@ -179,7 +179,7 @@ def player_numbers(team)
           if attribute == :players
             values.each do |person|
               person.each do |player_name,player_stats|
-            
+            array2.push(player_stat[:number])
                 end
               end
             end
