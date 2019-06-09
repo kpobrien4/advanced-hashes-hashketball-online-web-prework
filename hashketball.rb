@@ -172,24 +172,24 @@ def team_names
 end
 
 def player_numbers(team)
-    player_nums = []
-    game_hash.each do |location, team_data|
+  array2 = []
+  game_hash.each do |location, team_data|
       team_data.each do |attribute, values|
-         if attribute == :players
-           values.each do |person|
-             person.each do |player_name,player_number|
-             player_number.each do |i, j|
+          if attribute == :players
+            values.each do |person|
+              person.each do |player_name,player_number|
+              player_number.each do |i, j|
 
-               if i == :number
-                 player_nums.push(j)
-               end
+                if i == :number
+                  array2.push(j)
+                end
+end
+              end
+            end
+          end
+      end
+      return array2
   end
-    return player_nums
-end
-end
-end
-end
-end
 end
 
 def player_stats(name)
