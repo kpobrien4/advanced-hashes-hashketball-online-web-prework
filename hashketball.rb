@@ -174,6 +174,8 @@ end
 def player_numbers(team)
   array2 = []
   game_hash.each do |location, team_data|
+    if team == :team_name
+
     binding.pry
       team_data.each do |attribute, values|
           if attribute == :players
@@ -229,50 +231,4 @@ most_points = 0
    end
  end
  mvp
-end
-
-
-
-
-
-
-def winning_team
-  total_points = 0
-  win_team = ''
-  game_hash.each do |location, team_data|
-    team_points = 0
-    team_name = game_hash[location][:team_name]
-    team_data[:players].each do |player|
-      points = player[:points]
-      team_points += points
-    end
-    win_team, total_points = team_name, team_points if team_points > total_points
-  end
-  return win_team
-end
-
-
-def player_with_longest_name
-  longest = ''
-  longest_length = 0
-  game_hash.each do |home_away, keys|
-    keys[:players].each do |player|
-      name_length = player[:player_name].length
-      longest, longest_length = player[:player_name], name_length if name_length > longest_length
-    end
-  end
-  return longest
-end
-
-
-
-def long_name_steals_a_ton?
-  steals_most = ''
-  most_steals = 0
-  game_hash.each do |home_away, keys|
-    keys[:players].each do |player|
-      steals_most, most_steals = player[:player_name], player[:steals] if player[:steals] > most_steals
-    end
-  end
-  return true if steals_most == player_with_longest_name
 end
