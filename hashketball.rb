@@ -89,7 +89,7 @@ def game_hash
       :slam_dunks => 2
       },
       {
-      :name => "Bismak Biyombo", 
+      :name => "Bismak Biyombo",
       :number => 0,
       :shoe => 16,
       :points => 12,
@@ -100,7 +100,7 @@ def game_hash
       :slam_dunks => 10
       },
       {
-      :name => "DeSagna Diop", 
+      :name => "DeSagna Diop",
       :number => 2,
       :shoe => 14,
       :points => 24,
@@ -181,7 +181,7 @@ end
 
 def team_names
   game_hash.collect do |team, team_details_hash|
-    team_details_hash[:name] 
+    team_details_hash[:name]
   end
 end
 
@@ -192,7 +192,7 @@ def player_numbers (team_name)
     if team_details_hash[:name] == team_name
       team_details_hash[:players].each do |player|
         player.each do |key, value|
-          if key == :number 
+          if key == :number
             player_numbers_list << value
           end
         end
