@@ -180,7 +180,7 @@ def player_numbers(team)
             values.each do |person|
               person.each do |player_name,player_stats|
                 binding.pry
-              player_number.each do |i, j|
+              player_stats.each do |i, j|
                 if i == :number
                   array2.push(j)
                 end
