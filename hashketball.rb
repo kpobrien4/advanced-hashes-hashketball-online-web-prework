@@ -157,4 +157,5 @@ def team_colors(team_n)
       if value == team_n
         return player_stats[:colors]
       end
+    end
 end
