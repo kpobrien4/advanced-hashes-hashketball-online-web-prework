@@ -185,6 +185,7 @@ def player_numbers(team)
                 if i == :number
                   array2.push(j)
                 end
+                end
 end
               end
             end
