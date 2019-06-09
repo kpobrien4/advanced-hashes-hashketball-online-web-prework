@@ -123,6 +123,6 @@ def num_points_scored(name)
      team[:players]
    end.flatten
    all_players.each do |player|
-     return player[:points] if player[:player_name] == player_name
+     return player[:points]
    end
  end
