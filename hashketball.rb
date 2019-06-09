@@ -165,7 +165,7 @@ def team_colors(team_name)
   end
 end
 
-def player_numbers(team_name)
+def player_numbers(team_names)
   hash = game_hash
   array = []
   hash.each do |location, attributes|
