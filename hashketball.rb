@@ -174,9 +174,7 @@ end
 def player_numbers(team)
   array2 = []
   game_hash.each do |location, team_data|
-    if team == :team_name
-
-    binding.pry
+      if team_data[:team_name] = team
       team_data.each do |attribute, values|
           if attribute == :players
             values.each do |person|
@@ -184,6 +182,7 @@ def player_numbers(team)
               player_number.each do |i, j|
                 if i == :number
                   array2.push(j)
+                end
                 end
                 end
               end
