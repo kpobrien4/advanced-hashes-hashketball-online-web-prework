@@ -187,8 +187,8 @@ end
               end
             end
           end
+                return array2
       end
-      return array2
   end
 end
 
