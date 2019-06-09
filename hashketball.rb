@@ -118,10 +118,21 @@ def game_hash
 end
 
 
-def num_points_scored(name)
-  if game_hash[:home][:players][name]
-    game_hash[:home][:players][name][:points]
-  else
-    game_hash[:away][:players][name][:points]
-  end
+def num_points_scored(player_name)
+array2 = []
+game_hash.each do |location, team_data|
+    team_data.each do |attribute, values|
+        if attribute == :players
+          values.each do |person, data|
+            data.each do |i, j|
+              if person == player_name && i == :points
+                array2.push(j)
+              end
+
+            end
+          end
+        end
+    end
+end
+return array2[0]
 end
