@@ -217,18 +217,3 @@ def big_shoe_rebounds
   hash["Mason Plumlee"][:rebounds]
 end
 
-def most_points_scored
-most_points = 0
- game_hash.each do |location, team_data|
-   team_data[:players].each do |player|
-     player.each do |key,value|
-     points = player[:points]
-     if points > most_points
-       most_points = points
-       mvp = player[key]
-     end
-     end
-   end
- end
- mvp
-end
