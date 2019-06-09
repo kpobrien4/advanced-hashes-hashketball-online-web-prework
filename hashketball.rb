@@ -138,7 +138,3 @@ end
   end
   return true if steals_most == player_with_longest_name
 end
-
-
-
-
