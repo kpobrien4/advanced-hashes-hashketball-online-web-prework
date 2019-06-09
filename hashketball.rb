@@ -171,21 +171,21 @@ def team_names
   end
 end
 
-def player_numbers(team_name)
-  player_numbers_list = []
-game_hash.each do |team, team_details_hash|
-  if team_details_hash[:name] == team_name
-    team_details_hash[:players].each do |player|
-      player.each do |key, value|
-        binding.pry
-        if key == :number
-          player_numbers_list << value
+def player_numbers(team)
+  array2 = []
+  game_hash.each do |location, team_data|
+      team_data.each do |attribute, values|
+          if attribute == :players
+            values.each do |person, data|
+              data.each do |i, j|
+                if i == :number
+                  array2.push(j)
+                end
 
-        end
+              end
+            end
+          end
       end
-    end
   end
-end
-player_numbers_list
-
-end
+  return array2
+end 
