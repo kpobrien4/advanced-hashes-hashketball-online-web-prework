@@ -178,9 +178,9 @@ def player_numbers (team_name)
   game_hash.each do |team, team_details_hash|
     if team_details_hash[:name] == team_name
       team_details_hash[:players].each do |player|
+        binding.pry
         player.each do |key, value|
           if key == :number
-            binding.pry
             player_numbers_list << value
           end
         end
