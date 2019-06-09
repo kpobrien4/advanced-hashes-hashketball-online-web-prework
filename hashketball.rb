@@ -117,7 +117,14 @@ def game_hash
   }
 end
 
+def find_player_hash(player_name)
+  game_hash.each do |location, team_data|
+    if team_data[:players].include?(player_name)
+      return team_data[:players][player_name]
+    end 
+  end
+end 
 
-def num_points_scored3(player_name)
+def num_points_scored(player_name)
   find_player_hash(player_name)[:points]
 end 
