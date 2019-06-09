@@ -126,7 +126,7 @@ def num_points_scored(name)
         value.each do |player|
         player.each do |player_name, player_stats|
         if name == player_name
-          puts player_stats[:points]
+          return player_stats[:points]
     end
     end
     end
