@@ -181,6 +181,8 @@ def player_stats(player_name)
         player.each do |player_name, player_stats|
         if name == player_name
           return player_stats
+        end 
+      end
   end
 end
 end
